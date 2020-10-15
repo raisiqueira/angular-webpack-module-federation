@@ -1,27 +1,33 @@
-# NgFederation
+# Angular with Module Federation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0-next.5.
+> Monorepo with two apps to show how setup Angular app to work with Webpack 5 Module Federation.
 
-## Development server
+## How it Work's
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project has two Angular applications, **App01** and **Shell** (here we import all remote modules), at app01 we export a module
+called HelloModule (just Module at `webpack.config.js`). The App called _Shell_ import the module Hello from _App01_ and
+load into your route system.
 
-## Code scaffolding
+To see how those applications are setup, see `angular.json` file, and all `webpack.config.js` file into app01 and shell folder.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Before running all apps
 
-## Build
+Before run all apps, install all dependecies with **[Yarn](http://yarnpkg.org/)**.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Running App01
 
-## Running unit tests
+Run `yarn start:app01`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running Shell Application
 
-## Running end-to-end tests
+After run app01, run `yarn start:shell`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Used libs
 
-## Further help
+- Angular 11 (beta)
+- Webpack 5
+- ngx-build-plus (To extends Angular CLI build process)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+
+MIT @ Raí Siqueira
